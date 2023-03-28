@@ -10,6 +10,8 @@ Unloading reloadable single use weapons and/or stackable weapons can cause issue
 
 Needs a preview image
 
+Part of development is making a translation example so you may notice labels and such having (translated) at the end, this will be removed before release.
+
 # Current Mod Support:
 
 Ludeon
