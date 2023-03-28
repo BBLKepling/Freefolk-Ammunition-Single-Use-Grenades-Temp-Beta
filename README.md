@@ -3,9 +3,12 @@
 This is a temporary beta, there may be changes before release including but not limited to name, mod ID, balance.
 
 # Known Issues:
-MVCF's auto weapon switch isn't currently working for Verb_ShootOneUse, you can use Simple Sidearms to work around this for now. Once this is fixed Pocket Sand should be fully supported.
 
-Unloading reloadable single use weapons and/or stackable weapons can cause issues. Until a solution is concivied and implemented please don't unload grenades.
+MVCF's auto weapon switch isn't currently working for Verb_ShootOneUse, you can use Simple Sidearms to work around this for now.
+
+Unloading reloadable single use weapons and/or stackable weapons can cause issues, until a solution is concivied and implemented please don't unload grenades.
+
+Needs a preview image
 
 # Current Mod Support:
 
