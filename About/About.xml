@@ -11,7 +11,7 @@
     <description>Single use grenades and throwable weapons as a stand alone, intended to be used with vanilla ammunition systems such as LTS Ammunition, Yayo's Combat, or Flake Wombat.
 
 Created by Freefolk Modding Team.
-Powered by the MVCF from the Vanilla Expanded Framework</description>
+Powered by the Multi Verb Combat Framework from the Vanilla Expanded Framework</description>
     <modDependencies>
       <li>
         <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
@@ -21,7 +21,9 @@ Powered by the MVCF from the Vanilla Expanded Framework</description>
       </li>
     </modDependencies>
     <loadAfter>
-      <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
       <li>VanillaExpanded.VWEG</li>
     </loadAfter>
+    <loadBefore>
+      <li>Donald.VAR</li>
+    </loadBefore>
   </ModMetaData>
