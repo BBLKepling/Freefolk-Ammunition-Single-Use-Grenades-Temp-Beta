@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps) and *[self::defName="VWE_Weapon_FireBomb" or self::defName="VWE_Throwing_Shards"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps) and *[self::defName="VWE_Weapon_FireBomb" or self::defName="VWE_Throwing_Shards"]]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VWE_Weapon_FireBomb" or self::defName="VWE_Throwing_Shards"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VWE_Weapon_FireBomb" or self::defName="VWE_Throwing_Shards"]]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]/tradeTags</xpath>
+    <value>
+      <li>FF_Throwable</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]/*[self::stuffCategories or self::costStuffCount or self::recipeMaker]</xpath>
+    <attribute>IsNull</attribute>
+    <value>true</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/statBases</xpath>
+    <value>
+      <MarketValue>10</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Shards"]/statBases</xpath>
+    <value>
+      <MarketValue>1</MarketValue>
+    </value>
+  </Operation>
+-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.1</Mass>
+    </value>
+  </Operation>
+
+  <!-- This is to disable quality --> 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]/comps</xpath>
+    <attribute>Inherit</attribute>
+    <value>false</value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb" or defName="VWE_Throwing_Shards"]/smeltable</xpath>
+    <value>
+      <smeltable>false</smeltable>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>VWE_Weapon_FireBomb</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>VWE_Weapon_FireBomb</label>
+              <visualLabel>throw fire bomb</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <VWE_Weapon_FireBomb>10~15</VWE_Weapon_FireBomb>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+      <li Class="CompProperties_Forbiddable"/>      
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Shards"]/verbs/li[1]</xpath>
+    <value>
+      <label>VWE_Throwing_Shards</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Shards"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>VWE_Throwing_Shards</label>
+              <visualLabel>throw shard</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <VWE_Throwing_Shards>10~15</VWE_Throwing_Shards>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+      <li Class="CompProperties_Forbiddable"/>      
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+</Patch>

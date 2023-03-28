@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+  <Weapon_GrenadeFrag.comps.Comp_VerbProps.verbProps.0.visualLabel>throw frag grenade(translated)</Weapon_GrenadeFrag.comps.Comp_VerbProps.verbProps.0.visualLabel>
+
+  <Weapon_GrenadeEMP.comps.Comp_VerbProps.verbProps.0.visualLabel>throw EMP grenade(translated)</Weapon_GrenadeEMP.comps.Comp_VerbProps.verbProps.0.visualLabel>
+
+  <Weapon_GrenadeMolotov.comps.Comp_VerbProps.verbProps.0.visualLabel>throw molotov(translated)</Weapon_GrenadeMolotov.comps.Comp_VerbProps.verbProps.0.visualLabel>
+
+  <Pila.comps.Comp_VerbProps.verbProps.0.visualLabel>pila(translated)</Pila.comps.Comp_VerbProps.verbProps.0.visualLabel>
+
+</LanguageData>
+

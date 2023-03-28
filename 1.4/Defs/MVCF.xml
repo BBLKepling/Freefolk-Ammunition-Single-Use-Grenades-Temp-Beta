@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MVCF.ModDef>
+    <defName>FF_GNAT_MVCF_Enable</defName>
+    <label>Enable features</label>
+    <description>Features will be enabled if this def is included.</description>
+    <ActivateFeatures>
+      <li>IntegratedToggle</li>
+      <li>Reloading</li>
+    </ActivateFeatures>
+  </MVCF.ModDef>
+
+</Defs>
