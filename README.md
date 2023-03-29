@@ -54,6 +54,10 @@ Tyrannical Elmo
 
 -Industrial Armory
 
+Rimmu-Nation
+
+-Weapons
+
 Rimsenal
 
 -Core

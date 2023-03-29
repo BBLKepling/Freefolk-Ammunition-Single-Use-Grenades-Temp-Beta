@@ -30,9 +30,13 @@
       <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/Ammunition</li>
       <li IfModActive="LimeTreeSnake.Military">1.4/Mods/LTS/Military</li>
 
-      <!-- Rimsenal -->
+    <!-- RimmuNation -->
 
-        <li IfModActive="rimsenal.core">1.4/Mods/Rimsenal/Rimsenal_Core</li>
+      <li IfModActive="CP.RimmuNation.2.Weapons">1.4/Mods/RimmuNation/RimmuNation_Weapons</li>
+
+    <!-- Rimsenal -->
+
+      <li IfModActive="rimsenal.core">1.4/Mods/Rimsenal/Rimsenal_Core</li>
 
     <!-- Tyrannical Elmo -->
 

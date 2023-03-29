@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(recipeMaker) and defName="RNThrown_M84Stun_Grenade"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(recipeMaker) and defName="RNThrown_M84Stun_Grenade"]</xpath>
+      <value>
+        <recipeMaker />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]/recipeMaker</xpath>
+    <value>
+      <productCount>10</productCount>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]/statBases</xpath>
+    <value>
+      <MarketValue>13</MarketValue>
+    </value>
+  </Operation>
+-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.1</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>RNThrown_M84Stun_Grenade</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNThrown_M84Stun_Grenade"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>RNThrown_M84Stun_Grenade</label>
+              <visualLabel>throw m84 stun grenade</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <RNThrown_M84Stun_Grenade>10~15</RNThrown_M84Stun_Grenade>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+</Patch>
