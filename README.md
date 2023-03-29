@@ -56,6 +56,8 @@ Tyrannical Elmo
 
 Rimsenal
 
+-Core
+
 -Augmented Vanilla Pack
 
 Misc

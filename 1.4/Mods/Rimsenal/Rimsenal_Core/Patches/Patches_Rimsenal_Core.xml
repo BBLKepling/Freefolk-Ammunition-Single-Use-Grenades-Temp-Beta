@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps) and *[self::defName="TE_Grief" or self::defName="YP_BaegYa" or self::defName="GD_Bobcat" or self::defName="JI_Dunder"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps) and *[self::defName="TE_Grief" or self::defName="YP_BaegYa" or self::defName="GD_Bobcat" or self::defName="JI_Dunder"]]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TE_Grief" or defName="YP_BaegYa" or defName="GD_Bobcat" or defName="JI_Dunder"]/recipeMaker</xpath>
+    <value>
+      <productCount>10</productCount>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TE_Grief" or defName="YP_BaegYa" or defName="GD_Bobcat" or defName="JI_Dunder"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TE_Grief"]/statBases</xpath>
+    <value>
+      <MarketValue>28</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="YP_BaegYa"]/statBases</xpath>
+    <value>
+      <MarketValue>28</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GD_Bobcat"]/statBases</xpath>
+    <value>
+      <MarketValue>28</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="JI_Dunder"]/statBases</xpath>
+    <value>
+      <MarketValue>28</MarketValue>
+    </value>
+  </Operation>
+-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="TE_Grief"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.13</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="YP_BaegYa"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.112</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GD_Bobcat"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.108</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="JI_Dunder"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.431</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="TE_Grief"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>TE_Grief</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TE_Grief"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>TE_Grief</label>
+              <visualLabel>throw grenades</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <TE_Grief>10~15</TE_Grief>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="YP_BaegYa"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>YP_BaegYa</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="YP_BaegYa"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>YP_BaegYa</label>
+              <visualLabel>throw microwave grenade</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <YP_BaegYa>10~15</YP_BaegYa>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GD_Bobcat"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>GD_Bobcat</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GD_Bobcat"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>GD_Bobcat</label>
+              <visualLabel>throw grenades</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>3</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <GD_Bobcat>10~15</GD_Bobcat>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="JI_Dunder"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>JI_Dunder</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="JI_Dunder"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>JI_Dunder</label>
+              <visualLabel>throw satchel grenade</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <JI_Dunder>10~15</JI_Dunder>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+</Patch>
