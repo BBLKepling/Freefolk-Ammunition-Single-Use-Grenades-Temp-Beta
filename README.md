@@ -56,4 +56,6 @@ Tyrannical Elmo
 
 Smoke Grenades and Rimsenal Vanilla Pack(Smoke Grenades only)
 
+Argentinidad al Palo - Alfajor Edition
+
 Should work fine with Yayo Combat, Flake Wombat, or Vanilla Ammo Reloaded as thier auto patchers skip weapons with Verb_ShootOneUse.
