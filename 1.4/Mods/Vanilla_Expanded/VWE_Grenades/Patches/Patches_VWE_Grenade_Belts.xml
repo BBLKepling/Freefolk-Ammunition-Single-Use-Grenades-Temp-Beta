@@ -10,7 +10,8 @@
       defName="VWE_Apparel_GrenadeSmokeBelt" or 
       defName="VWE_Apparel_GrenadeFlashBelt" or 
       defName="VWE_Apparel_GrenadeTearGasBelt" or 
-      defName="VWE_Apparel_DynamiteBelt"
+      defName="VWE_Apparel_DynamiteBelt" or 
+      defName="VWE_Apparel_GrenadePlasmaImmolator"
     ]/comps/li[@Class="CompProperties_Reloadable"]/ammoCountToRefill</xpath>
     <value>
       <ammoCountPerCharge>1</ammoCountPerCharge>
@@ -73,6 +74,13 @@
           <xpath>Defs/ThingDef[defName="VWE_Apparel_DynamiteBelt"]/costList/VFES_Weapon_GrenadeDynamite</xpath>
           <value>
             <VFES_Weapon_GrenadeDynamite>6</VFES_Weapon_GrenadeDynamite>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace" MayRequire="hlx.ReinforcedMechanoids2">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadePlasmaImmolator"]/costList/RM_Weapon_GrenadePlasmaImmolator</xpath>
+          <value>
+            <RM_Weapon_GrenadePlasmaImmolator>5</RM_Weapon_GrenadePlasmaImmolator>
           </value>
         </li>
 

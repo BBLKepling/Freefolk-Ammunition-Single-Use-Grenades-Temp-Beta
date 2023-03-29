@@ -22,6 +22,7 @@ Powered by the Multi Verb Combat Framework from the Vanilla Expanded Framework</
     </modDependencies>
     <loadAfter>
       <li>VanillaExpanded.VWEG</li>
+      <li>hlx.ReinforcedMechanoids2</li>
     </loadAfter>
     <loadBefore>
       <li>Donald.VAR</li>

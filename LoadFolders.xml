@@ -31,6 +31,10 @@
 
       <li IfModActive="Aelanna.EccentricTech.Flares2">1.4/Mods/Eccentric_Tech/ET_Flares</li>
 
+    <!-- Helixien -->
+
+      <li IfModActive="hlx.ReinforcedMechanoids2">1.4/Mods/Helixien/ReinforcedMechanoids2</li>
+
     <!-- LimeTreeSnake -->
 
       <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/LTS_Ammunition</li>
