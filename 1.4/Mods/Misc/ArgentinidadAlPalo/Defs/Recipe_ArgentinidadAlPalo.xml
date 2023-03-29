@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>Make_10x_nepe</defName>
+    <label>make Pene Ministerial x10</label>
+    <description>Make Pene Ministerial x10.</description>
+    <jobString>Making Pene Ministerial x10.</jobString>
+    <workAmount>69</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Woody</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>69</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <stuffCategoriesToAllow>
+        <li>Woody</li>
+      </stuffCategoriesToAllow>
+      <thingDefs>
+        <li>Milk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <nepe>10</nepe>
+    </products>
+  </RecipeDef>
+
+</Defs>

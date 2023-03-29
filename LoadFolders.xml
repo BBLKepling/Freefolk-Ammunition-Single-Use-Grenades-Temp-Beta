@@ -36,7 +36,11 @@
 
     <!-- Smoke Grenades & Rimsenal - Augmented Vanilla Pack since they share a defName -->
 
-      <li IfModActive="rimsenal.EVP,Nex.Smoke.Grenades">1.3/Mods/Smoke_Grenades</li>
+      <li IfModActive="rimsenal.EVP,Nex.Smoke.Grenades">1.4/Mods/Smoke_Grenades</li>
+
+    <!-- Misc -->
+
+      <li IfModActive="wolf.ArgentinidadAlPalo">1.4/Mods/Misc/ArgentinidadAlPalo</li>
 
   </v1.4>
 </loadFolders>

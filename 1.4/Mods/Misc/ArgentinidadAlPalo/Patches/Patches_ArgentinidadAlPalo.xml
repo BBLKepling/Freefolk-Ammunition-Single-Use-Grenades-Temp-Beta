@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps) and defName="nepe"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps) and defName="nepe"]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(tradeTags) and defName="nepe"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(tradeTags) and defName="nepe"]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="nepe"]/tradeTags</xpath>
+    <value>
+      <li>FF_Throwable</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="nepe"]</xpath>
+    <value>
+      <smeltable>false</smeltable>
+      <stackLimit>10</stackLimit>
+      <recipeMaker />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="nepe"]/*[self::costList or self::stuffCategories or self::costStuffCount or self::recipeMaker]</xpath>
+    <attribute>IsNull</attribute>
+    <value>true</value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="nepe"]/statBases/MarketValue</xpath>
+    <value>
+      <MarketValue>202</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="nepe"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.1</Mass>
+    </value>
+  </Operation>
+
+  <!-- This is to disable quality --> 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="nepe"]/comps</xpath>
+    <attribute>Inherit</attribute>
+    <value>false</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="nepe"]/verbs/li[1]</xpath>
+    <value>
+      <label>nepe</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="nepe"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>nepe</label>
+              <visualLabel>throw Pene Ministerial</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>WoodLog</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <nepe>10~15</nepe>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+      <li Class="CompProperties_Forbiddable"/>      
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+</Patch>
