@@ -21,14 +21,20 @@
       <li IfModActive="VanillaExpanded.VWENL">1.4/Mods/Vanilla_Expanded/VWE_NonLethal</li>
       <li IfModActive="VanillaExpanded.VWETB">1.4/Mods/Vanilla_Expanded/VWE_Tribal</li>
 
+    <!-- ALIEN Armory -->
+
+      <li IfModActive="ALIEN.CensoredArmory">1.4/Mods/Armory_ALIEN/Censored_Armory</li>
+      <li IfModActive="ALIEN.KaiserArmory">1.4/Mods/Armory_ALIEN/Kaiser_Armory</li>
+      <li IfModActive="ALIEN.TsarArmory">1.4/Mods/Armory_ALIEN/Tsar_Armory</li>
+
     <!-- Eccentric Tech -->
 
       <li IfModActive="Aelanna.EccentricTech.Flares2">1.4/Mods/Eccentric_Tech/ET_Flares</li>
 
     <!-- LimeTreeSnake -->
 
-      <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/Ammunition</li>
-      <li IfModActive="LimeTreeSnake.Military">1.4/Mods/LTS/Military</li>
+      <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/LTS_Ammunition</li>
+      <li IfModActive="LimeTreeSnake.Military">1.4/Mods/LTS/LTS_Military</li>
 
     <!-- RimmuNation -->
 
@@ -38,13 +44,13 @@
 
       <li IfModActive="rimsenal.core">1.4/Mods/Rimsenal/Rimsenal_Core</li>
 
-    <!-- Tyrannical Elmo -->
-
-      <li IfModActive="TyrannicalElmo.IndustrialArmory">1.4/Mods/Tyrannical_Elmo/IndustrialArmory</li>
-
     <!-- Smoke Grenades & Rimsenal - Augmented Vanilla Pack since they share a defName -->
 
       <li IfModActive="rimsenal.EVP,Nex.Smoke.Grenades">1.4/Mods/Smoke_Grenades</li>
+
+    <!-- Tyrannical Elmo -->
+
+      <li IfModActive="TyrannicalElmo.IndustrialArmory">1.4/Mods/Tyrannical_Elmo/IndustrialArmory</li>
 
     <!-- Misc -->
 

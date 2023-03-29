@@ -40,6 +40,14 @@ Vanilla Weapons Expanded
 
 -Tribal
 
+ALIEN
+
+-Censored Armory
+
+-Kaiser Armory
+
+-Tsar Armory
+
 Eccentric Tech
 
 -Flares

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]/recipeMaker</xpath>
+    <value>
+      <productCount>10</productCount>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]/statBases</xpath>
+    <value>
+      <MarketValue>13</MarketValue>
+    </value>
+  </Operation>
+-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.06</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>Weapon_M1914_TA</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_M1914_TA"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+          <verbProps>
+            <li>
+              <label>Weapon_M1914_TA</label>
+              <visualLabel>throw frag grenade</visualLabel>
+              <canBeToggled>true</canBeToggled>
+              <canFireIndependently>false</canFireIndependently>
+              <comps>
+                <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                  <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                  <MaxShots>1</MaxShots>
+                  <AmmoFilter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </AmmoFilter>
+                  <GenerateAmmo>
+                    <Weapon_M1914_TA>10~15</Weapon_M1914_TA>
+                  </GenerateAmmo>
+                  <NewVerbClass>Verb_ShootOneUse</NewVerbClass>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+
+</Patch>
