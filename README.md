@@ -1,3 +1,7 @@
+New Version available here: https://github.com/Freefolk-Rimworld-Modding/Freefolk-Ammunition---Single-Use-Grenades-N-at
+
+
+
 # Freefolk-Ammunition-Single-Use-Grenades-Temp-Beta
 
 This is a temporary beta, there may be changes before release including but not limited to name, mod ID, balance.
